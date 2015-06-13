@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46386BFB1B2C1D7600329FE6 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 46386BFA1B2C1D7500329FE6 /* blue.png */; };
+		46386BFD1B2C21D700329FE6 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 46386BFC1B2C21D700329FE6 /* red.png */; };
 		4655B92B1AE246EC000A310D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655B92A1AE246EC000A310D /* AppDelegate.swift */; };
 		4655B92D1AE246EC000A310D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4655B92C1AE246EC000A310D /* ViewController.swift */; };
 		4655B9301AE246EC000A310D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4655B92E1AE246EC000A310D /* Main.storyboard */; };
@@ -29,6 +31,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		46386BFA1B2C1D7500329FE6 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
+		46386BFC1B2C21D700329FE6 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
 		4655B9251AE246EC000A310D /* maze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = maze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4655B9291AE246EC000A310D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4655B92A1AE246EC000A310D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 				4655B94C1AE25088000A310D /* ThirdViewController.swift */,
 				4655B92E1AE246EC000A310D /* Main.storyboard */,
 				4655B94E1AE25E91000A310D /* dot_green.png */,
+				46386BFA1B2C1D7500329FE6 /* blue.png */,
+				46386BFC1B2C21D700329FE6 /* red.png */,
 				4655B9311AE246EC000A310D /* Images.xcassets */,
 				4655B9331AE246EC000A310D /* LaunchScreen.xib */,
 				4655B9281AE246EC000A310D /* Supporting Files */,
@@ -202,7 +208,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4655B9301AE246EC000A310D /* Main.storyboard in Resources */,
+				46386BFB1B2C1D7600329FE6 /* blue.png in Resources */,
 				4655B9351AE246EC000A310D /* LaunchScreen.xib in Resources */,
+				46386BFD1B2C21D700329FE6 /* red.png in Resources */,
 				4655B9321AE246EC000A310D /* Images.xcassets in Resources */,
 				4655B94F1AE25E91000A310D /* dot_green.png in Resources */,
 			);
@@ -417,6 +425,7 @@
 				4655B9461AE246EC000A310D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4655B9471AE246EC000A310D /* Build configuration list for PBXNativeTarget "mazeTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +434,7 @@
 				4655B9491AE246EC000A310D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

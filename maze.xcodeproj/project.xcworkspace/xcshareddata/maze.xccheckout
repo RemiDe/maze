@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FCA41C6F-DF71-4069-950E-DDBFAD27FB54</string>
+	<key>IDESourceControlProjectName</key>
+	<string>maze</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2964249747F29F02C98FF6D2E6696CED37235907</key>
+		<string>https://github.com/RemiDe/maze.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>maze.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2964249747F29F02C98FF6D2E6696CED37235907</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/RemiDe/maze.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2964249747F29F02C98FF6D2E6696CED37235907</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2964249747F29F02C98FF6D2E6696CED37235907</string>
+			<key>IDESourceControlWCCName</key>
+			<string>maze</string>
+		</dict>
+	</array>
+</dict>
+</plist>
