@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  FirstViewController.swift
 //  maze
 //
 //  Created by Ryu I on 2015/06/27.
@@ -9,11 +9,11 @@
 import UIKit
 import CoreMotion
 
-class SecondViewController: UIViewController {
+class FirstViewController: UIViewController {
     let myBoundSize: CGSize = UIScreen.mainScreen().bounds.size
     
-    let saveData2:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-
+    let saveData:NSUserDefaults = NSUserDefaults.standardUserDefaults()
+    
     var motionManager: CMMotionManager!
     var imageView: UIImageView!
     var speedX: Double = 0.0
@@ -22,7 +22,7 @@ class SecondViewController: UIViewController {
     var posY: CGFloat = 0.0
     
     var score: Float = 0.0
-    var count2: Float = 0.0
+    var count: Float = 0.0
     
     var timer: NSTimer = NSTimer()
     @IBOutlet var label: UILabel!
@@ -30,7 +30,6 @@ class SecondViewController: UIViewController {
     @IBOutlet var overView1: UIImageView!
     @IBOutlet var overView2: UIImageView!
     @IBOutlet var overView3: UIImageView!
-    @IBOutlet var overView4: UIImageView!
     @IBOutlet var clearView: UIImageView!
     @IBOutlet var statusLabel: UILabel!
     @IBOutlet var backBt: UIButton!
@@ -38,12 +37,11 @@ class SecondViewController: UIViewController {
     @IBAction func back(){
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        if saveData2.objectForKey("count2") != nil {
-            count2 = saveData2.objectForKey("count2") as! Float
+        if saveData.objectForKey("count") != nil {
+            count = saveData.objectForKey("count") as! Float
         }
         
         statusLabel.text = ""
@@ -62,6 +60,7 @@ class SecondViewController: UIViewController {
         //更新周期を設定
         motionManager.accelerometerUpdateInterval = 0.02
         
+        
         self.startMotionManager()
         
         //タイマー
@@ -71,7 +70,7 @@ class SecondViewController: UIViewController {
             userInfo: nil,
             repeats: true
         )
-        
+
         // Do any additional setup after loading the view.
     }
     
@@ -100,16 +99,16 @@ class SecondViewController: UIViewController {
                 self.imageView.center = CGPointMake(self.posX, self.posY)
                 self.gameOver()
                 self.clear()
-                
         })
     }
+    
     //タイマーのやつ
     func up(){
         score = score + 0.01
         label.text = String(format: "%.2f", score)
     }
-        
-    //ふれたら終わるやつら
+    
+    //ふれたら終わるやつ
     func gameOver() {
         if CGRectContainsPoint(overView1.frame, imageView.center) {
             statusLabel.text = "Game Over!"
@@ -138,15 +137,6 @@ class SecondViewController: UIViewController {
                 timer.invalidate()
             }
         }
-        if CGRectContainsPoint(overView4.frame, imageView.center) {
-            statusLabel.text = "Game Over!"
-            backBt.enabled = true
-            backBt.hidden = false
-            if (motionManager.accelerometerActive) {
-                motionManager.stopAccelerometerUpdates()
-                timer.invalidate()
-            }
-        }
     }
     
     //ふれたらクリア
@@ -160,15 +150,15 @@ class SecondViewController: UIViewController {
                 motionManager.stopAccelerometerUpdates()
                 timer.invalidate()
             }
-            if(count2 == 0 || score < count2){
-                count2 = score
-                saveData2.setObject(count2, forKey: "count2")
-                saveData2.synchronize()
+            if(count == 0 || score < count){
+                count = score
+                saveData.setObject(count, forKey: "count")
+                saveData.synchronize()
             }
         }
     }
-
-    override func didReceiveMemoryWarning() {
+    
+        override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
